@@ -2,35 +2,418 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Dei V</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía del Cantante</title>
+    <style>
+/* CSS para Biografía de Cantantes - Estilo Profesional */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.header .subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sección de imagen principal */
+.hero-section {
+    background: white;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI0MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDQwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjM0M0MDQzIi8+CjxwYXRoIGQ9Ik02MDAgMTAwQzY1MCA4MCA3MDAgMTIwIDc1MCA5MEM4MDAgNjAgODUwIDEyMCA5MDAgODBDOTUwIDQwIDEwMDAgMTA1IDEwNTAgNzVDMTEwMCA0NSAxMTUwIDk1IDEyMDAgNjVWNDAwSDBWNjVDNTAgOTUgMTAwIDQ1IDE1MCA3NUMyMDAgMTA1IDI1MCA0NSAzMDAgODBDMzUwIDEyMCA0MDAgNjAgNDUwIDkwQzUwMCAxMjAgNTUwIDgwIDYwMCAxMDBaIiBmaWxsPSIjNTc1QTVEIiBmaWxsLW9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4K');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 30px;
+}
+
+.hero-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Layout principal */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/* Sección de biografía */
+.biography-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.biography-section h3 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.biography-section p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.biography-section p:first-of-type::first-letter {
+    font-size: 3em;
+    float: left;
+    line-height: 1;
+    margin: 0 8px 0 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjeta de información */
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-card h4 {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 8px;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list li strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.info-list li span {
+    color: #666;
+}
+
+/* Sección de discografía */
+.discography {
+    background: white;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.discography h3 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.album-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.album-card .album-cover {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.album-card h5 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.album-card .year {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Sección de redes sociales */
+.social-links {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.social-links h4 {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    line-height: 45px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-image {
+        height: 250px;
+    }
+    
+    .biography-section,
+    .info-card,
+    .discography {
+        padding: 20px;
+    }
+    
+    .album-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-overlay h2 {
+        font-size: 1.5rem;
+    }
+    
+    .biography-section h3,
+    .discography h3 {
+        font-size: 1.5rem;
+    }
+}
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Dei V</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="myke-towers.html">Myke Towers</a></li>
-                <li><a href="clarent.html">Clarent</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>DEI-V</h1>
+            <p class="subtitle">Artista Musical</p>
+        </div>
     </header>
-    <main>
-        <section>
-            <img src="images/dei-v.jpg" alt="Dei V">
-            <h2>Biografía</h2>
-            <p>David Gerardo Rivera Juarbe, conocido artísticamente como Dei V, es un cantante y compositor puertorriqueño. Nació el 27 de diciembre de 1995 en Carolina, Puerto Rico. Su debut discográfico fue en 2021 con su EP "Ying Yang". Alcanzó reconocimiento internacional en 2023 con la canción "¿Quién es Dei V?". :contentReference[oaicite:2]{index=2}</p>
-            <h2>Discografía destacada</h2>
-            <ul>
-                <li>2021: Ying Yang (EP)</li>
-                <li>2024: ¿Quién es Dei V?</li>
-                <li>2024: Los Marcianos, Vol. 1: Dei V Version (EP colaborativo)</li>
-            </ul>
+
+    <!-- Imagen Principal -->
+    <div class="container">
+        <section class="hero-section">
+            <div class="hero-image">
+                <div class="hero-overlay">
+                    <h2>DEI-V</h2>
+                    <p>Cantante y compositor contemporáneo</p>
+                </div>
+            </div>
         </section>
-    </main>
-    <footer>
-        <p>Actividad SMX-M08 | HTML y CSS</p>
+
+        <!-- Contenido Principal -->
+        <div class="main-content">
+            <!-- Biografía -->
+            <section class="biography-section">
+                <h3>Biografía</h3>
+                <p>DEI-V es un talentoso artista musical que ha cautivado a audiencias de todo el mundo con su estilo único y su voz distintiva. Desde sus inicios en la música, ha demostrado una pasión inquebrantable por crear melodías que conectan directamente con el corazón de sus oyentes.</p>
+                
+                <p>Nacido en una familia con profundas raíces musicales, DEI-V creció rodeado de diversos géneros y estilos que posteriormente influenciarían su propuesta artística. Su formación musical comenzó a temprana edad, estudiando tanto técnicas vocales clásicas como contemporáneas.</p>
+                
+                <p>A lo largo de su carrera, ha logrado fusionar elementos del pop, R&B y música latina, creando un sonido fresco y actual que resuena con audiencias de diferentes generaciones. Sus letras, profundas y emotivas, abordan temas universales como el amor, la superación personal y la búsqueda de la identidad.</p>
+                
+                <p>Con cada nuevo lanzamiento, DEI-V continúa evolucionando como artista, experimentando con nuevos sonidos y colaborando con productores y músicos de renombre internacional. Su compromiso con la excelencia musical y su autenticidad lo han posicionado como una de las voces más prometedoras de la escena musical actual.</p>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Información Personal -->
+                <div class="info-card">
+                    <h4>Información</h4>
+                    <ul class="info-list">
+                        <li><strong>Nombre Artístico:</strong> <span>DEI-V</span></li>
+                        <li><strong>Género:</strong> <span>Pop/R&B</span></li>
+                        <li><strong>Años Activo:</strong> <span>2020 - presente</span></li>
+                        <li><strong>Discográfica:</strong> <span>Independiente</span></li>
+                        <li><strong>Instrumentos:</strong> <span>Voz, Piano</span></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="social-links">
+                    <h4>Sígueme</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">♪</a>
+                        <a href="#" class="social-icon">♫</a>
+                        <a href="#" class="social-icon">♬</a>
+                        <a href="#" class="social-icon">♭</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Discografía -->
+        <section class="discography">
+            <h3>Discografía</h3>
+            <div class="album-grid">
+                <div class="album-card">
+                    <div class="album-cover">♪</div>
+                    <h5>Primer Álbum</h5>
+                    <p class="year">2022</p>
+                </div>
+                <div class="album-card">
+                    <div class="album-cover">♫</div>
+                    <h5>Singles Collection</h5>
+                    <p class="year">2023</p>
+                </div>
+                <div class="album-card">
+                    <div class="album-cover">♬</div>
+                    <h5>Nuevo Proyecto</h5>
+                    <p class="year">2024</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DEI-V. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
