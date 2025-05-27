@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myke Towers - Biografía</title>
+    <title>Biografía de Myke Towers</title>
     <style>
-/* CSS para Myke Towers - Estilo Urbano */
 
 * {
     margin: 0;
@@ -16,173 +15,126 @@
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
     line-height: 1.6;
-    color: #fff;
-    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%);
-    min-height: 100vh;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
-/* Header con gradiente urban */
 .header {
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #ff4757 50%, #e52d27 75%, #b31217 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 15px,
-        rgba(255,255,255,0.08) 15px,
-        rgba(255,255,255,0.08) 30px
-    );
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
 }
 
 .header h1 {
-    font-size: 4.5rem;
-    font-weight: 900;
-    margin-bottom: 15px;
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .header .subtitle {
-    font-size: 1.8rem;
-    color: #fff;
+    font-size: 1.2rem;
+    color: #ccc;
     font-weight: 300;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    letter-spacing: 2px;
 }
 
-/* Container principal */
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
-                linear-gradient(45deg, #ff6b35, #e52d27);
-    margin: 0;
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: white;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
-.hero-content {
-    text-align: center;
-    z-index: 2;
+.hero-image {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI0MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDQwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMjc4NTRGIi8+CjxwYXRoIGQ9Ik02MDAgMTAwQzY1MCA4MCA3MDAgMTIwIDc1MCA5MEM4MDAgNjAgODUwIDEyMCA5MDAgODBDOTUwIDQwIDEwMDAgMTA1IDEwNTAgNzVDMTEwMCA0NSAxMTUwIDk1IDEyMDAgNjVWNDAwSDBWNjVDNTAgOTUgMTAwIDQ1IDE1MCA3NUMyMDAgMTA1IDI1MCA0NSAzMDAgODBDMzUwIDEyMCA0MDAgNjAgNDUwIDkwQzUwMCAxMjAgNTUwIDgwIDYwMCAxMDBaIiBmaWxsPSIjMzJBNjUyIiBmaWxsLW9wYWNpdHk9IjAuNCIvPgo8L3N2Zz4K');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
 
-.hero-content h2 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
-    letter-spacing: 3px;
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 30px;
 }
 
-.hero-content p {
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    max-width: 600px;
-    margin: 0 auto;
+.hero-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-/* Layout principal */
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    margin: 50px 0;
+    gap: 30px;
+    margin: 30px 0;
 }
 
-/* Sección de biografía */
 .biography-section {
-    background: rgba(255,255,255,0.05);
-    padding: 40px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,107,53,0.3);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .biography-section h3 {
-    color: #ff6b35;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #ff6b35;
-    padding-bottom: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
 }
 
 .biography-section p {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: justify;
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 .biography-section p:first-of-type::first-letter {
-    font-size: 4em;
+    font-size: 3em;
     float: left;
     line-height: 1;
-    margin: 0 12px 0 0;
-    color: #ff6b35;
-    font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0 8px 0 0;
+    color: #27ae60;
+    font-weight: bold;
 }
 
-/* Sidebar */
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
-/* Tarjeta de información */
 .info-card {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,107,53,0.3);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .info-card h4 {
-    color: #ff6b35;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ff6b35;
-    padding-bottom: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 8px;
 }
 
 .info-list {
@@ -190,8 +142,8 @@ body {
 }
 
 .info-list li {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
 }
@@ -201,287 +153,252 @@ body {
 }
 
 .info-list li strong {
-    color: #ff6b35;
+    color: #333;
     font-weight: 600;
 }
 
 .info-list li span {
-    color: #ccc;
+    color: #666;
 }
 
-/* Sección de discografía */
 .discography {
-    background: rgba(255,255,255,0.05);
-    margin: 50px 0;
-    padding: 40px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,107,53,0.3);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background: white;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .discography h3 {
-    color: #ff6b35;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #ff6b35;
-    padding-bottom: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
 }
 
 .album-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .album-card {
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    border-radius: 12px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    transition: all 0.4s ease;
-    border: 1px solid rgba(255,107,53,0.2);
-    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
 }
 
 .album-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(255,107,53,0.3);
-    border-color: #ff6b35;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .album-card .album-cover {
     width: 100%;
-    height: 160px;
-    background: linear-gradient(45deg, #ff6b35, #e52d27, #b31217);
-    border-radius: 8px;
-    margin-bottom: 18px;
+    height: 150px;
+    background: linear-gradient(45deg, #27ae60, #229954);
+    border-radius: 5px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    font-size: 2rem;
 }
 
 .album-card h5 {
-    color: #fff;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 .album-card .year {
-    color: #ff6b35;
-    font-size: 1rem;
-    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
 }
 
-/* Sección de redes sociales */
 .social-links {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,107,53,0.3);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
 
 .social-links h4 {
-    color: #ff6b35;
-    margin-bottom: 25px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-icon {
     display: inline-block;
-    width: 55px;
-    height: 55px;
-    background: linear-gradient(45deg, #ff6b35, #e52d27);
+    width: 45px;
+    height: 45px;
+    background: #27ae60;
     color: white;
     text-decoration: none;
     border-radius: 50%;
-    line-height: 55px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: all 0.4s ease;
-    box-shadow: 0 5px 15px rgba(255,107,53,0.3);
+    line-height: 45px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    background: linear-gradient(45deg, #e52d27, #b31217);
-    transform: scale(1.15) rotate(5deg);
-    box-shadow: 0 8px 25px rgba(255,107,53,0.5);
+    background: #229954;
+    transform: scale(1.1);
 }
 
-/* Footer */
 .footer {
-    background: rgba(0,0,0,0.8);
+    background: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 40px 0;
-    margin-top: 60px;
-    border-top: 2px solid #ff6b35;
+    padding: 30px 0;
+    margin-top: 50px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .main-content {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
     }
     
     .header h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-section {
-        height: 50vh;
+    .hero-image {
+        height: 250px;
     }
     
     .biography-section,
     .info-card,
     .discography {
-        padding: 25px;
+        padding: 20px;
     }
     
     .album-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
     
     .header h1 {
-        font-size: 2.5rem;
-        letter-spacing: 2px;
+        font-size: 1.5rem;
     }
     
-    .hero-content h2 {
-        font-size: 2rem;
+    .hero-overlay h2 {
+        font-size: 1.5rem;
     }
     
     .biography-section h3,
     .discography h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
-        <div class="header-content">
+        <div class="container">
             <h1>MYKE TOWERS</h1>
-            <p class="subtitle">REGGAETON & TRAP</p>
+            <p class="subtitle">Rey del Reggaetón y Trap Latino</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h2>MYKE TOWERS</h2>
-            <p>El arquitecto del reggaetón moderno</p>
-        </div>
-    </section>
-
     <div class="container">
-        <!-- Contenido Principal -->
+        <section class="hero-section">
+            <div class="hero-image">
+                <div class="hero-overlay">
+                    <h2>MYKE TOWERS</h2>
+                    <p>Icono de la música urbana puertorriqueña</p>
+                </div>
+            </div>
+        </section>
+
         <div class="main-content">
-            <!-- Biografía -->
             <section class="biography-section">
                 <h3>Biografía</h3>
-                <p>Myke Towers, cuyo nombre real es Michael Anthony Torres Monge, es uno de los exponentes más destacados del reggaetón y trap latino contemporáneo. Nacido en Río Piedras, Puerto Rico, este talentoso artista ha logrado conquistar las listas de éxitos internacionales con su estilo único y versátil.</p>
+                <p>Myke Towers, cuyo nombre real es Michael Anthony Torres Monge, es uno de los artistas más influyentes y exitosos de la música urbana contemporánea. Nacido en Río Piedras, Puerto Rico, en 1994, ha logrado conquistar las listas de éxitos mundiales con su estilo único que fusiona reggaetón, trap y hip-hop.</p>
                 
-                <p>Desde sus inicios en la música, Myke Towers ha demostrado una habilidad excepcional para fusionar diferentes géneros urbanos, creando un sonido distintivo que lo ha posicionado como una de las figuras más influyentes de la nueva generación del reggaetón. Su capacidad para adaptarse tanto al reggaetón clásico como al trap moderno lo ha convertido en un artista muy solicitado para colaboraciones.</p>
+                <p>Desde muy joven mostró un talento excepcional para la música, comenzando a componer y grabar sus primeras canciones en su adolescencia. Su dedicación y pasión por el arte lo llevaron a perfeccionar su técnica de rap y a desarrollar un flow distintivo que rápidamente captó la atención de la industria musical.</p>
                 
-                <p>Con múltiples éxitos en plataformas digitales y colaboraciones con los artistas más importantes del género urbano, Myke Towers ha demostrado que su talento trasciende fronteras. Sus letras, que van desde temas románticos hasta reflexiones sobre la vida urbana, conectan profundamente con audiencias de todas las edades.</p>
+                <p>Su ascenso meteórico comenzó en 2016 con el lanzamiento de varios sencillos que se viralizaron en las plataformas digitales. Colaboraciones con artistas de la talla de Bad Bunny, J Balvin, Ozuna y Daddy Yankee consolidaron su posición como una de las voces más importantes del género urbano latinoamericano.</p>
                 
-                <p>Su constante evolución artística y su dedicación a perfeccionar su craft lo han establecido como uno de los arquitectos del reggaetón moderno, influenciando a una nueva generación de artistas urbanos y manteniendo su relevancia en una industria en constante cambio.</p>
+                <p>Con múltiples álbumes en el top de las listas, millones de reproducciones en streaming y premios internacionales, Myke Towers continúa expandiendo las fronteras de la música urbana latina, llevando el sonido puertorriqueño a audiencias globales y estableciendo nuevos estándares para las futuras generaciones de artistas urbanos.</p>
             </section>
 
-            <!-- Sidebar -->
             <aside class="sidebar">
-                <!-- Información Personal -->
                 <div class="info-card">
-                    <h4>Info</h4>
+                    <h4>Información</h4>
                     <ul class="info-list">
-                        <li><strong>Nombre Real:</strong> <span>Michael Anthony Torres</span></li>
+                        <li><strong>Nombre Real:</strong> <span>Michael Torres</span></li>
                         <li><strong>Género:</strong> <span>Reggaetón/Trap</span></li>
-                        <li><strong>Activo:</strong> <span>2016 - presente</span></li>
-                        <li><strong>Origen:</strong> <span>Puerto Rico</span></li>
-                        <li><strong>Label:</strong> <span>One World Music</span></li>
+                        <li><strong>Nacimiento:</strong> <span>1994, Puerto Rico</span></li>
+                        <li><strong>Años Activo:</strong> <span>2014 - presente</span></li>
+                        <li><strong>Discográfica:</strong> <span>One World Music</span></li>
                     </ul>
                 </div>
 
-                <!-- Redes Sociales -->
                 <div class="social-links">
                     <h4>Sígueme</h4>
                     <div class="social-icons">
-                        <a href="#" class="social-icon">IG</a>
-                        <a href="#" class="social-icon">TW</a>
-                        <a href="#" class="social-icon">YT</a>
-                        <a href="#" class="social-icon">SP</a>
+                        <a href="#" class="social-icon">♪</a>
+                        <a href="#" class="social-icon">♫</a>
+                        <a href="#" class="social-icon">♬</a>
+                        <a href="#" class="social-icon">♭</a>
                     </div>
                 </div>
             </aside>
         </div>
 
-        <!-- Discografía -->
         <section class="discography">
             <h3>Discografía</h3>
             <div class="album-grid">
                 <div class="album-card">
-                    <div class="album-cover">🏗️</div>
+                    <div class="album-cover">♪</div>
                     <h5>El Final del Principio</h5>
                     <p class="year">2016</p>
                 </div>
                 <div class="album-card">
-                    <div class="album-cover">🌟</div>
-                    <h5>Hecho en Casa</h5>
-                    <p class="year">2018</p>
-                </div>
-                <div class="album-card">
-                    <div class="album-cover">🏆</div>
+                    <div class="album-cover">M</div>
                     <h5>Easy Money Baby</h5>
                     <p class="year">2020</p>
                 </div>
                 <div class="album-card">
-                    <div class="album-cover">💫</div>
+                    <div class="album-cover">T</div>
                     <h5>Lyke Mike</h5>
                     <p class="year">2021</p>
                 </div>
                 <div class="album-card">
-                    <div class="album-cover">🔥</div>
+                    <div class="album-cover">♬</div>
                     <h5>La Vida Es Una</h5>
+                    <p class="year">2022</p>
+                </div>
+                <div class="album-card">
+                    <div class="album-cover">♭</div>
+                    <h5>LVEU (Deluxe)</h5>
                     <p class="year">2023</p>
                 </div>
                 <div class="album-card">
-                    <div class="album-cover">👑</div>
-                    <h5>Lyke Miike</h5>
-                    <p class="year">2025</p>
+                    <div class="album-cover">🏆</div>
+                    <h5>COUNT ON ME</h5>
+                    <p class="year">2024</p>
                 </div>
             </div>
         </section>
@@ -489,7 +406,7 @@ body {
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 MYKE TOWERS. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Myke Towers. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
